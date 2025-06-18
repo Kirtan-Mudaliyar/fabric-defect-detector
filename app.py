@@ -46,7 +46,7 @@ if input_mode == "Upload Image":
         st.image(image, caption="Uploaded Image",width=400)
         if st.button("Detect Defects"):
             output = detect_defects(np.array(image))
-            st.image(output, caption="Detection Output", use_container_width=True)
+            st.image(output, caption="Detection Output", use_container_width=True,width=400)
 
 # === 📷 Real-Time Webcam Mode
 else:
