@@ -38,7 +38,7 @@ if input_mode == "📤 Upload Image":
     uploaded_file = st.file_uploader("Upload Fabric Image", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
         image = Image.open(uploaded_file).convert("RGB")
-        st.image(image, caption="Uploaded Image", use_container_width=True)
+        st.image(image, caption="Uploaded Image", use_container_width=True,width=400)
         if st.button("Detect Defects"):
             output = detect_defects(np.array(image))
             st.image(output, caption="Detection Output", use_container_width=True)
