@@ -43,10 +43,16 @@ if input_mode == "Upload Image":
     uploaded_file = st.file_uploader("Upload Fabric Image", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
         image = Image.open(uploaded_file).convert("RGB")
-        st.image(image, caption="Uploaded Image",width=400)
-        if st.button("Detect Defects"):
-            output = detect_defects(np.array(image))
-            st.image(output, caption="Detection Output", use_container_width=True,width=400)
+        
+        col1, col2 = st.columns(2)  # 👈 Arrange side-by-side
+        
+        with col1:
+            st.image(image, caption="Uploaded Image", width=400)
+        
+        with col2:
+            if st.button("Detect Defects"):
+                output = detect_defects(np.array(image))
+                st.image(output, caption="Detection Output", width=400)
 
 # === 📷 Real-Time Webcam Mode
 else:
