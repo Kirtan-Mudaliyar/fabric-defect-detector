@@ -15,7 +15,7 @@ model = YOLO("weights/best.pt")
 
 # ✅ Streamlit page config
 st.set_page_config(page_title="Fabric Defect Detection", layout="wide")
-st.title("🧵 Fabric Defect Detection with YOLOv8")
+st.title("Fabric Defect Detection with YOLOv8")
 
 # === 📌 Sidebar Info ===
 with st.sidebar:
@@ -52,7 +52,7 @@ if input_mode == "Upload Image":
 
 # === 📷 Real-Time Webcam Mode
 else:
-    st.markdown("### 🎥 Live Webcam Feed (YOLOv8 Real-Time Detection)")
+    st.markdown("### Live Webcam Feed (YOLOv8 Real-Time Detection)")
 
     class YOLOVideoProcessor(VideoProcessorBase):
         def recv(self, frame):
@@ -75,4 +75,4 @@ else:
 
 # === Footer
 st.markdown("---")
-st.markdown("🔧 Powered by [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) · 🧠 Trained on AITEX Fabric Defect Dataset")
+st.markdown("Powered by [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) · Trained on AITEX Fabric Defect Dataset")
