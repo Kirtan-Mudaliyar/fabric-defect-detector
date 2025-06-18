@@ -74,7 +74,7 @@ st.markdown("""
     <hr style='margin-top: 0.01rem; border: 1px solid #444;' />
 """, unsafe_allow_html=True)
 
-st.markdown("❝ The Fabric Defect Detector is a real-time AI-based web app built using YOLOv8 to identify fabric defects like holes, tears, and stains from images or live webcam input. Trained on the AITEX dataset and developed using Streamlit, it offers a fast and user-friendly solution for textile quality inspection. ❞")
+st.markdown("‘ The Fabric Defect Detector is a real-time AI-based web app built using YOLOv8 to identify fabric defects like holes, tears, and stains from images or live webcam input. Trained on the AITEX dataset and developed using Streamlit, it offers a fast and user-friendly solution for textile quality inspection. ’")
 
 # === 📌 Sidebar Info ===
 with st.sidebar:
