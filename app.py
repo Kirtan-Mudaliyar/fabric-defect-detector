@@ -1,8 +1,9 @@
 import streamlit as st
 import numpy as np
-import cv2
+import cv2  # Requires opencv-python-headless in requirements.txt
 from ultralytics import YOLO
 from PIL import Image
+import os
 
 # ✅ Load YOLOv8 model
 model = YOLO("weights/best.pt")
@@ -15,14 +16,20 @@ st.title("🧵 Fabric Defect Detection with YOLOv8")
 col1, col2 = st.columns([1, 2])
 
 with col1:
-    st.image("banner.jpg", caption="Example: Defective Fabric", use_column_width=True)
+    if os.path.exists("banner.jpg"):
+        st.image("banner.jpg", caption="Example: Defective Fabric", use_column_width=True)
+    else:
+        st.image("https://raw.githubusercontent.com/ultralytics/assets/main/yolov8-banner.png",
+                 caption="Example: Defective Fabric", use_column_width=True)
 
 with col2:
     st.markdown("""
     ### Why Fabric Defect Detection?
-    Fabric defects like holes, tears, oil stains, and misweaves can degrade product quality,
-    increase waste, and harm brand reputation. This application leverages a custom-trained
-    YOLOv8 model on the AITEX dataset to detect such defects in real-time.
+
+    Fabric defects like holes, tears, oil stains, and misweaves can degrade product quality,  
+    increase waste, and harm brand reputation.
+
+    This application leverages a custom-trained **YOLOv8 model on the AITEX dataset** to detect such defects in real-time.
 
     🚀 Upload your own fabric image or use your webcam to test the detector.
     """)
