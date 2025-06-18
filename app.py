@@ -24,36 +24,34 @@ def set_custom_theme():
     st.markdown("""
         <style>
             body {
-                background-color: #f7f8fa;
-                color: #333333;
-                font-family: 'Segoe UI', sans-serif;
+                background-color: #0f1117;
+                color: #e0e0e0;
             }
 
             [data-testid="stSidebar"] {
-                background-color: #f0f4f8;
+                background-color: #161a24;
             }
 
             h1, h2, h3 {
-                color: #ff69b4;
+                color: #00f7ff;
             }
 
             .markdown-text-container {
-                color: #333333;
+                color: #e0e0e0;
             }
 
             .stButton > button {
-                background-color: #ffc0cb;
-                color: black;
+                background-color: #1e90ff;
+                color: white;
                 border: none;
                 border-radius: 8px;
-                padding: 0.5em 1.2em;
-                transition: 0.2s;
-                font-weight: bold;
+                padding: 0.5em 1em;
+                transition: all 0.3s ease;
             }
 
             .stButton > button:hover {
-                background-color: #ffb6c1;
-                color: white;
+                background-color: #00bfff;
+                color: black;
             }
 
             img {
@@ -61,14 +59,15 @@ def set_custom_theme():
             }
 
             .stRadio > div {
-                background-color: #f0f4f8;
-                padding: 0.4em;
-                border-radius: 8px;
+                background-color: #1a1d2b;
+                padding: 0.5em;
+                border-radius: 10px;
             }
         </style>
     """, unsafe_allow_html=True)
 
 set_custom_theme()
+
 
 st.title("Fabric Defect Detection with YOLOv8")
 
