@@ -56,12 +56,13 @@ else:
     rtc_config = RTCConfiguration({"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]})
 
     webrtc_streamer(
-        key="realtime-detection",
-        mode="VIDEO",
-        rtc_configuration=rtc_config,
-        video_processor_factory=YOLOVideoProcessor,
-        media_stream_constraints={"video": True, "audio": False},
+    key="realtime-detection",
+    mode=WebRtcMode.SENDRECV,  # ✅ Enum, not string
+    rtc_configuration=rtc_config,
+    video_processor_factory=YOLOVideoProcessor,
+    media_stream_constraints={"video": True, "audio": False},
     )
+
 
 # === Footer ===
 st.markdown("---")
