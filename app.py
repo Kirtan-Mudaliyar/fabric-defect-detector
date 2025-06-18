@@ -14,7 +14,47 @@ import av
 model = YOLO("weights/best.pt")
 
 # ✅ Streamlit page config
-st.set_page_config(page_title="Fabric Defect Detection", layout="wide")
+st.set_page_config(
+    page_title="Fabric Defect Detection",
+    page_icon="🧵",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+def set_custom_theme():
+    st.markdown("""
+        <style>
+            body {
+                background-color: #111111;
+                color: #eeeeee;
+            }
+            [data-testid="stSidebar"] {
+                background-color: #1f1f1f;
+            }
+            h1, h2, h3 {
+                color: #FF6EC7;
+            }
+            .markdown-text-container {
+                color: #dddddd;
+            }
+            .stButton > button {
+                background-color: #FF6EC7;
+                color: black;
+                border: none;
+                border-radius: 8px;
+                padding: 0.5em 1em;
+                transition: 0.3s;
+            }
+            .stButton > button:hover {
+                background-color: #ff89da;
+                color: white;
+            }
+            img {
+                border-radius: 10px;
+            }
+        </style>
+    """, unsafe_allow_html=True)
+
+set_custom_theme()
 st.title("Fabric Defect Detection with YOLOv8")
 
 # === 📌 Sidebar Info ===
