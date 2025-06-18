@@ -1,9 +1,8 @@
 import streamlit as st
 import numpy as np
-import cv2  # Requires opencv-python-headless in requirements.txt
+import cv2
 from ultralytics import YOLO
 from PIL import Image
-import os
 
 # ✅ Load YOLOv8 model
 model = YOLO("weights/best.pt")
@@ -16,20 +15,14 @@ st.title("🧵 Fabric Defect Detection with YOLOv8")
 col1, col2 = st.columns([1, 2])
 
 with col1:
-    if os.path.exists("banner.jpg"):
-        st.image("banner.jpg", caption="Example: Defective Fabric", use_column_width=True)
-    else:
-        st.image("https://raw.githubusercontent.com/ultralytics/assets/main/yolov8-banner.png",
-                 caption="Example: Defective Fabric", use_column_width=True)
+    st.image("banner.jpg", caption="Example: Defective Fabric", use_container_width=True)
 
 with col2:
     st.markdown("""
     ### Why Fabric Defect Detection?
-
-    Fabric defects like holes, tears, oil stains, and misweaves can degrade product quality,  
-    increase waste, and harm brand reputation.
-
-    This application leverages a custom-trained **YOLOv8 model on the AITEX dataset** to detect such defects in real-time.
+    Fabric defects like holes, tears, oil stains, and misweaves can degrade product quality,
+    increase waste, and harm brand reputation. This application leverages a custom-trained
+    YOLOv8 model on the AITEX dataset to detect such defects in real-time.
 
     🚀 Upload your own fabric image or use your webcam to test the detector.
     """)
@@ -49,20 +42,20 @@ if input_mode == "📤 Upload Image":
     uploaded_file = st.file_uploader("Upload Fabric Image", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
         image = Image.open(uploaded_file).convert("RGB")
-        st.image(image, caption="Uploaded Image", use_column_width=True)
+        st.image(image, caption="Uploaded Image", use_container_width=True)
         if st.button("Detect Defects"):
             output = detect_defects(np.array(image))
-            st.image(output, caption="Detection Output", use_column_width=True)
+            st.image(output, caption="Detection Output", use_container_width=True)
 
 # === 📷 Webcam Mode ===
 elif input_mode == "📷 Use Webcam":
     webcam_image = st.camera_input("Capture Fabric Sample")
     if webcam_image is not None:
         image = Image.open(webcam_image).convert("RGB")
-        st.image(image, caption="Captured Image", use_column_width=True)
+        st.image(image, caption="Captured Image", use_container_width=True)
         if st.button("Detect Defects from Webcam"):
             output = detect_defects(np.array(image))
-            st.image(output, caption="Detection Output", use_column_width=True)
+            st.image(output, caption="Detection Output", use_container_width=True)
 
 # === Footer ===
 st.markdown("---")
