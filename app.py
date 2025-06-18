@@ -16,7 +16,7 @@ model = YOLO("weights/best.pt")
 # ✅ Streamlit page config
 st.set_page_config(
     page_title="Fabric Defect Detection",
-    page_icon="🧵",
+    page_icon="🔍",
     layout="wide",
     initial_sidebar_state="expanded"
 )
