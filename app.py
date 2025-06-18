@@ -24,32 +24,51 @@ def set_custom_theme():
     st.markdown("""
         <style>
             body {
-                background-color: #111111;
-                color: #eeeeee;
+                background-color: #0d0d0d;
+                color: #d0ffd0;
+                font-family: 'Courier New', monospace;
             }
+
             [data-testid="stSidebar"] {
-                background-color: #1f1f1f;
+                background-color: #111;
             }
+
             h1, h2, h3 {
-                color: #FF6EC7;
+                color: #00ff41;
+                text-shadow: 0 0 10px #00ff41;
             }
+
             .markdown-text-container {
-                color: #dddddd;
+                color: #d0ffd0;
             }
+
             .stButton > button {
-                background-color: #FF6EC7;
+                background-color: #00cc44;
                 color: black;
                 border: none;
-                border-radius: 8px;
+                border-radius: 6px;
                 padding: 0.5em 1em;
-                transition: 0.3s;
+                font-weight: bold;
+                transition: 0.3s ease;
             }
+
             .stButton > button:hover {
-                background-color: #ff89da;
-                color: white;
+                background-color: #00ff88;
+                color: black;
             }
+
             img {
-                border-radius: 10px;
+                border-radius: 8px;
+            }
+
+            .stRadio > div {
+                background-color: #1a1a1a;
+                padding: 0.5em;
+                border-radius: 8px;
+            }
+
+            .css-1offfwp {
+                color: #00ff41 !important;
             }
         </style>
     """, unsafe_allow_html=True)
