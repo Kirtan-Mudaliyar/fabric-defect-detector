@@ -11,23 +11,19 @@ model = YOLO("weights/best.pt")
 st.set_page_config(page_title="Fabric Defect Detection", layout="wide")
 st.title("🧵 Fabric Defect Detection with YOLOv8")
 
-# === 🖼️ Image + Description Row ===
-col1, col2 = st.columns([1, 2])
-
-with col1:
+# === 📌 Sidebar Info ===
+with st.sidebar:
     st.image("banner.jpg", caption="Example: Defective Fabric", use_container_width=True)
-
-with col2:
     st.markdown("""
     ### Why Fabric Defect Detection?
+
     Fabric defects like holes, tears, oil stains, and misweaves can degrade product quality,
-    increase waste, and harm brand reputation. This application leverages a custom-trained
-    YOLOv8 model on the AITEX dataset to detect such defects in real-time.
+    increase waste, and harm brand reputation.
 
-    🚀 Upload your own fabric image or use your webcam to test the detector.
+    🧠 This app uses a YOLOv8 model trained on the AITEX dataset to detect such defects.
+
+    🚀 Upload a fabric image or use your webcam to test detection in real-time!
     """)
-
-st.divider()
 
 # === 🧠 Detection Function ===
 def detect_defects(image):
