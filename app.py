@@ -29,7 +29,6 @@ The Fabric Defect Detector is a real-time AI-based web app built using YOLOv8 to
 3) Anshal Suthar
 4) Akansha Ravat
 5) Dishant Modi
-##
     """)
 
 # === 🧠 Detection Function (Single Image)
