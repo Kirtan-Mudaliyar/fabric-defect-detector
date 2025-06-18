@@ -36,7 +36,7 @@ def detect_defects(image):
     return results.plot()
 
 # === Input Method Selection
-input_mode = st.radio("Choose Input Method:", ["Upload Image", "Use Webcam"])
+input_mode = st.radio("Choose Input Method:", ["Upload Image", "Real-Time training"])
 
 # === 📤 Upload Mode
 if input_mode == "Upload Image":
