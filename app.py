@@ -53,7 +53,7 @@ def set_custom_theme():
             }
         </style>
     """, unsafe_allow_html=True)
-)
+
 set_custom_theme()
 
 st.title("Fabric Defect Detection with YOLOv8")
