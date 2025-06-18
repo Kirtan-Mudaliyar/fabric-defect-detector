@@ -41,18 +41,21 @@ input_mode = st.radio("Choose Input Method:", ["Upload Image", "Real-Time tracki
 # === 📤 Upload Mode
 if input_mode == "Upload Image":
     uploaded_file = st.file_uploader("Upload Fabric Image", type=["jpg", "jpeg", "png"])
+    
     if uploaded_file is not None:
         image = Image.open(uploaded_file).convert("RGB")
         
-        col1, col2 = st.columns(2)  # 👈 Arrange side-by-side
-        
+        col1, col2 = st.columns(2)
+
         with col1:
             st.image(image, caption="Uploaded Image", width=400)
-        
+            detect = st.button("Detect Defects")  # 👈 Button just below input image
+
         with col2:
-            if st.button("Detect Defects"):
+            if 'detect' in locals() and detect:
                 output = detect_defects(np.array(image))
                 st.image(output, caption="Detection Output", width=400)
+
 
 # === 📷 Real-Time Webcam Mode
 else:
