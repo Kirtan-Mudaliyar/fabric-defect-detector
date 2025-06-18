@@ -69,7 +69,6 @@ def set_custom_theme():
 set_custom_theme()
 
 
-st.title("Fabric Defect Detection with YOLOv8")
 st.markdown("""
     <h1 style='margin-bottom: 0.2rem;'>Fabric Defect Detection with YOLOv8</h1>
     <hr style='margin-top: 0.2rem; border: 1px solid #444;' />
