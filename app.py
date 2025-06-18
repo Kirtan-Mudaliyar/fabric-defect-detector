@@ -21,15 +21,16 @@ st.title("Fabric Defect Detection with YOLOv8")
 with st.sidebar:
     st.image("banner.jpg", caption="Example: Defective Fabric", use_container_width=True)
     st.markdown("""
-    ### Why Fabric Defect Detection?
+   About the Fabric Defect Detector
+The Fabric Defect Detector is a real-time AI-powered web application developed by our team as a solution for automating textile quality inspection. Leveraging the capabilities of the YOLOv8 deep learning model, this tool accurately detects a variety of fabric defects such as holes, tears, stains, and misweaves from both uploaded images and live webcam feeds. It was trained on the AITEX fabric dataset and optimized for real-time inference using Streamlit and OpenCV.
 
-    Fabric defects like holes, tears, oil stains, and misweaves can degrade product quality,
-    increase waste, and harm brand reputation.
+This project was collaboratively built by a passionate team of aspiring engineers:
 
-    This app uses a YOLOv8 model trained on the AITEX dataset to detect such defects.
-
-    📤 Upload a fabric image  
-    📷 Or use your webcam for **real-time detection**
+1) Kirtan Mudaliyar
+2) Namrata Rathod
+3) Anshal Suthar
+4) Akansha Ravat
+5) Dishant Modi
     """)
 
 # === 🧠 Detection Function (Single Image)
