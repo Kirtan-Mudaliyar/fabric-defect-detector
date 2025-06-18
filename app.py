@@ -24,37 +24,50 @@ def set_custom_theme():
     st.markdown("""
         <style>
             body {
-                background-color: #111111;
-                color: #eeeeee;
+                background-color: #0f1117;
+                color: #e0e0e0;
             }
+
             [data-testid="stSidebar"] {
-                background-color: #1f1f1f;
+                background-color: #161a24;
             }
+
             h1, h2, h3 {
-                color: #FF6EC7;
+                color: #00f7ff;
             }
+
             .markdown-text-container {
-                color: #dddddd;
+                color: #e0e0e0;
             }
+
             .stButton > button {
-                background-color: #FF6EC7;
-                color: black;
+                background-color: #1e90ff;
+                color: white;
                 border: none;
                 border-radius: 8px;
                 padding: 0.5em 1em;
-                transition: 0.3s;
+                transition: all 0.3s ease;
             }
+
             .stButton > button:hover {
-                background-color: #ff89da;
-                color: white;
+                background-color: #00bfff;
+                color: black;
             }
+
             img {
+                border-radius: 10px;
+            }
+
+            .stRadio > div {
+                background-color: #1a1d2b;
+                padding: 0.5em;
                 border-radius: 10px;
             }
         </style>
     """, unsafe_allow_html=True)
 
 set_custom_theme()
+
 st.title("Fabric Defect Detection with YOLOv8")
 
 # === 📌 Sidebar Info ===
