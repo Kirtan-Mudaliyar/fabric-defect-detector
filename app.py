@@ -9,7 +9,7 @@ model = YOLO("weights/best.pt")
 
 # ✅ App settings
 st.set_page_config(page_title="Fabric Defect Detection", layout="wide")
-st.title("🧵 Fabric Defect Detection with YOLOv8")
+st.title("Fabric Defect Detection with YOLOv8")
 
 # === 📌 Sidebar Info ===
 with st.sidebar:
@@ -20,9 +20,9 @@ with st.sidebar:
     Fabric defects like holes, tears, oil stains, and misweaves can degrade product quality,
     increase waste, and harm brand reputation.
 
-    🧠 This app uses a YOLOv8 model trained on the AITEX dataset to detect such defects.
+    This app uses a YOLOv8 model trained on the AITEX dataset to detect such defects.
 
-    🚀 Upload a fabric image or use your webcam to test detection in real-time!
+    Upload a fabric image or use your webcam to test detection in real-time!
     """)
 
 # === 🧠 Detection Function ===
@@ -31,10 +31,10 @@ def detect_defects(image):
     return results.plot()
 
 # === 🔘 Input Selector ===
-input_mode = st.radio("Choose Input Method:", ["📤 Upload Image", "📷 Use Webcam"])
+input_mode = st.radio("Choose Input Method:", ["Upload Image", "Use Webcam"])
 
 # === 📤 Upload Mode ===
-if input_mode == "📤 Upload Image":
+if input_mode == "Upload Image":
     uploaded_file = st.file_uploader("Upload Fabric Image", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
         image = Image.open(uploaded_file).convert("RGB")
@@ -44,7 +44,7 @@ if input_mode == "📤 Upload Image":
             st.image(output, caption="Detection Output", use_container_width=True)
 
 # === 📷 Webcam Mode ===
-elif input_mode == "📷 Use Webcam":
+elif input_mode == "Use Webcam":
     webcam_image = st.camera_input("Capture Fabric Sample")
     if webcam_image is not None:
         image = Image.open(webcam_image).convert("RGB")
@@ -55,4 +55,4 @@ elif input_mode == "📷 Use Webcam":
 
 # === Footer ===
 st.markdown("---")
-st.markdown("🔧 Powered by [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) · 🧠 Trained on AITEX Fabric Defect Dataset")
+st.markdown("Powered by [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) · Trained on AITEX Fabric Defect Dataset")
