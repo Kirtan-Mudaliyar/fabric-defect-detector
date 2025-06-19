@@ -1,42 +1,53 @@
----
-title: Fabric Defect Detector 🧵
-emoji: 🧶
-colorFrom: blue
-colorTo: pink
-sdk: streamlit
-sdk_version: 1.34.0
-app_file: app.py
-pinned: false
-license: mit
----
+<h1 align="center">🧵 Fabric Defect Detector</h1>
 
-# 🧵 Fabric Defect Detection with YOLOv8
+<p align="center">
+  <img src="banner.jpg" alt="Banner" width="60%" />
+</p>
 
-This Streamlit app detects common fabric defects using a custom-trained YOLOv8 model.  
-Users can either upload an image or use a webcam to analyze fabric samples.
+<p align="center">
+  <b>A real-time web application built with YOLOv8 & Streamlit to detect fabric defects like holes, tears, stains, and more.</b>
+</p>
 
 ---
 
-## 🚀 Features
-- 📷 Real-time webcam detection
-- 📁 Upload image for inference
-- ⚙️ Powered by Ultralytics YOLOv8
-- 🧠 Trained on AITEX Fabric Defect Dataset
+<h3>🚀 Live Demo</h3>
+
+<p>
+<a href="https://your-streamlit-url.streamlit.app" target="_blank">
+  👉 Try it on Streamlit Cloud
+</a>
+</p>
 
 ---
 
-## 🛠 Usage
+<h3>👨‍💻 Developed By</h3>
 
-### 📦 On Hugging Face Spaces
-Click the “Run” button on the top of this page and try:
+<ul>
+  <li><b>Kirtan Mudaliyar</b></li>
+  <li>Namrata Rathod</li>
+  <li>Anshal Suthar</li>
+  <li>Akansha Ravat</li>
+  <li>Dishant Modi</li>
+</ul>
 
-- Uploading images of fabric with defects
-- Live detection using webcam
+---
 
-### 🖥️ Run Locally
+<h3>🧠 Model Information</h3>
 
-```bash
-git clone https://huggingface.co/spaces/kirtan0706/fabric-defect-detector
-cd fabric-defect-detector
-pip install -r requirements.txt
-python app.py
+- 📦 Architecture: YOLOv8 (Ultralytics)
+- 🧵 Dataset: AITEX Fabric Defect Dataset
+- 🎯 Purpose: Identify textile defects in real-time (stains, holes, tears, etc.)
+
+---
+
+<h3>💡 Key Features</h3>
+
+✔️ Upload image or use webcam for inference  
+✔️ Real-time YOLOv8 detection  
+✔️ Stylish Streamlit UI with dark theme  
+✔️ Docker-ready for local/production deployment  
+
+---
+
+<h3>📁 Project Structure</h3>
+
