@@ -137,4 +137,4 @@ else:
 
 # === Footer
 st.markdown("---")
-st.markdown("🔧 P
+st.markdown("Powered by [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) · Trained on AITEX Fabric Defect Dataset")
