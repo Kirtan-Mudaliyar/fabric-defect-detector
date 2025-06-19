@@ -1,5 +1,9 @@
-<h1 align="left"> Fabric Defect Detector</h1>
-
+<h1 align="left" style="font-size: 3em; color: #00f7ff; margin-bottom: 0;">
+  🧵 Fabric Defect Detector
+</h1>
+<p align="left" style="font-size: 1.2em; color: #888;">
+  Real-Time Textile Defect Detection Using YOLOv8
+</p>
 <p align="left">
   <img src="banner.jpg" alt="Banner" width="60%" />
 </p>
