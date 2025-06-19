@@ -118,7 +118,7 @@ else:
     class YOLOVideoProcessor(VideoProcessorBase):
         def recv(self, frame):
             img = frame.to_ndarray(format="bgr24")
-            results = model(img,conf=0.8)[0]
+            results = model(img,conf=0.6)[0]
             annotated_frame = results.plot()
             return av.VideoFrame.from_ndarray(annotated_frame, format="bgr24")
 
