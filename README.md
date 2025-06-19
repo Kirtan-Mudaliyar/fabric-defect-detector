@@ -1,10 +1,10 @@
-<h1 align="center">🧵 Fabric Defect Detector</h1>
+<h1 align="left"> Fabric Defect Detector</h1>
 
-<p align="center">
+<p align="left">
   <img src="banner.jpg" alt="Banner" width="60%" />
 </p>
 
-<p align="center">
+<p align="left">
   <b>A real-time web application built with YOLOv8 & Streamlit to detect fabric defects like holes, tears, stains, and more.</b>
 </p>
 
